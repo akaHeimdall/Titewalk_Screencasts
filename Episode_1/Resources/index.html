@@ -1,0 +1,35 @@
+<html>
+	<head>
+		
+	</head>
+	<body style="background-color:#1c1c1c;margin:0">
+		<div style="border-top:1px solid #404040">
+			<div style="color:#fff;;padding:10px">Welcome to Titanium</div>
+		</div>
+		
+		<script type="text/javascript" src="jquery-1.3.2.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			// Launch inspcector
+			var thisWindow = Titanium.UI.getCurrentWindow();
+			thisWindow.showInspector();
+		
+		
+			Titanium.API.debug('=================================');
+			Titanium.API.debug('=================================');
+			Titanium.API.debug('debug ME');
+			Titanium.API.warn('warn ME');
+			Titanium.API.info('info ME');
+			Titanium.API.trace('trace ME');
+			// I believe there is a problem with the trace statement not working. 
+			// I recall a forum discussion but cannot recall exactly.
+			Titanium.API.debug('=================================');
+			Titanium.API.debug('=================================');
+			
+			
+			console.log("Show content");
+			console.log("TELL ME");
+			console.warn("Show Warning");
+			console.error("Show error");
+		</script>
+	</body>
+</html>
