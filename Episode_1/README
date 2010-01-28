@@ -4,7 +4,4 @@ Episode 1: Debugging, Logging, and Viewing Output
 At times you will need to view the output for your application. Although you can view the output using the integrated console view in Titanium developer, it's best to use an external log viewer and/or the WebKit console for output. In this video we'll look through some of the options.
 
 References:
-<ul>
-	<li><a title="Titanium.API" href="http://www.codestrong.com/titanium/api/titanium/API/" target="_blank">Titanium.API namespace (API Docs)</a></li>
-	<li><a title="Source code " href="http://github.com/imarichardson/Titewalk_Screencasts/tree/master/Episode_1/" target="_blank">Source Code for Episode</a></li>
-</ul>
+* http://www.codestrong.com/titanium/api/titanium/API/
