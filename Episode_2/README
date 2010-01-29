@@ -1,0 +1,11 @@
+TITEWALK SCREENCASTS: 
+Episode 2: Monitoring Network Connectivity Status
+
+Any good web / online based application should be able to detect whether or not a user is connected or disconnected from the internet. Furthermore, the application should notify the user immediately when a connection drops to ensure that he or she does not loose data. In this episode we'll look at how to make that happen using the Titanium.Network class.
+
+References:
+* Titanium Network.online Property: http://www.codestrong.com/titanium/api/titanium/Network/online/
+* Titanium addConnectivityListener Method: http://www.codestrong.com/titanium/api/titanium/Network/addConnectivityListener/
+* jQuery CSS class: http://api.jquery.com/category/css/
+* jQueryUI Dialog Class: http://jqueryui.com/demos/dialog/#option-dialogClass
+* Source Code:  http://github.com/imarichardson/Titewalk_Screencasts/tree/master/Episode_2/

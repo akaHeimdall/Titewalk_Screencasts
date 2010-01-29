@@ -1,0 +1,34 @@
+body {
+	font-family: 'Arial';
+	font-size: 14px;
+	background: #000;
+	margin: 0px;
+	padding:10px;
+}
+#header {
+font-size: 20px;
+  display: block;
+  height: 30px;
+/*  width: 100%;
+*/  padding-top: 20px;
+  padding-bottom: 10px;
+  text-align: center;
+  border-bottom: 2px solid #979797;
+  background: #C2C2C2;
+  background: -webkit-gradient(linear, left top, left bottom, from(#EAEAEA), to(#C2C2C2));
+  text-shadow: 0px 1px 1px #fff;
+  color: #2C2C2C;
+ -webkit-border-top-left-radius: 6px;
+ -webkit-border-top-right-radius: 6px;
+}
+
+
+#contents {
+	background: #FFF;
+	padding:10px,10px, 10px, 0px ;
+	 -webkit-border-radius: 6px;
+	/*height: 100%;*/
+}
+p{
+	padding:10px;
+}

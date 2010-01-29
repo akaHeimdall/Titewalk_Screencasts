@@ -1,0 +1,72 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="css/tite_styles.css" type="text/css" media="screen" title="no title" charset="utf-8">
+		<link rel="stylesheet" href="css/custom-theme/jquery-ui-1.8rc1.custom.css" type="text/css" media="screen" title="no title" charset="utf-8">
+		<style type="text/css" media="screen">
+			.online {
+				background: -webkit-gradient(linear, left top, left bottom, from(#01B201), to(#018301));
+			 -webkit-border-radius: 10px;
+			}
+			
+			.offline {
+				background: -webkit-gradient(linear, left top, left bottom, from(#BC3536), to(#EE7071));
+			 -webkit-border-radius: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div id="contents">
+			
+				<div id="header">
+					My Application
+				</div>
+			
+				<p>
+					Network Status:
+					<span id="NetworkStatus">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				</p>
+			
+		</div>
+		<div id="offlineText" style="display:none;">
+			Your connection to the internet had been lost. Please verify that your computer is connected to the internet.
+		</div>
+		
+		
+		<script src="js/jquery-1.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-ui-1.8rc1.custom.min.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script type="text/javascript" charset="utf-8">
+			// IN PRODUCTION APPLICATIONS YOU'D WANT TO MOVE CODE HERE TO A SEPARATE FILE
+			// var thisWindow = Titanium.UI.getCurrentWindow();
+			// thisWindow.showInspector();
+			
+			console.log("Online? " + Titanium.Network.online);
+			
+			function updateConnectivityStatus(event) {
+				if (event) {
+					// ONLINE
+					$("#NetworkStatus").removeClass();
+					$("#NetworkStatus").addClass("online");
+					$("#offlineText").dialog("destroy");
+				} else {
+					//OFFLINE
+					$("#NetworkStatus").removeClass().addClass("offline");
+					$("#offlineText").dialog({
+						height: 140,
+						modal: true,
+						closeOnEscape: false,
+						title: 'Connection Lost'
+					});
+				}
+			}
+			
+			updateConnectivityStatus(Titanium.Network.online);
+			
+			Titanium.Network.addConnectivityListener( function(event) {
+				updateConnectivityStatus(event);
+			});
+			
+		</script>
+	</body>
+</html>
