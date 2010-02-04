@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="css/tite_styles.css" type="text/css" media="screen" title="no title" charset="utf-8">
+		<link rel="stylesheet" href="css/custom-theme/jquery-ui-1.8rc1.custom.css" type="text/css" media="screen" title="no title" charset="utf-8">
+		
+	</head>
+	<body>
+		
+		<div id="contents">
+			
+				<div id="header">
+					My Application
+				</div>
+			
+				<p>
+					For this application we'll be examining the Notification Object.
+					For this episode everything is happening behind the scenes in the javascript.
+				</p>
+			
+		</div>
+		
+		
+		<script src="js/jquery-1.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-ui-1.8rc1.custom.min.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script type="text/javascript" charset="utf-8">
+		// IN PRODUCTION APPLICATIONS YOU'D WANT TO MOVE CODE HERE TO A SEPARATE FILE
+
+		// Open inspector on load
+		// var thisWindow=Titanium.UI.getCurrentWindow();
+		// 		thisWindow.showInspector();
+		
+		function myCallback(title){
+			alert(title);
+		}
+		
+		function showNotification(title, message, icon) {
+			var notify = Titanium.Notification.createNotification(window);
+			notify.setTitle(title);
+			notify.setMessage(message);
+			notify.setIcon(icon);
+			notify.setCallback(myCallback(title));
+			notify.show();
+		}
+		
+		showNotification("My Title", "My Message", "/images/penguin.png");
+		showNotification("My Second Title", "My Second Message", "/images/penguin.png");
+		
+		
+		
+		
+
+
+		</script>
+	</body>
+</html>
