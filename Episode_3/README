@@ -1,0 +1,10 @@
+TITEWALK SCREENCASTS: 
+Episode 3: Titanium Notifications
+
+Everyone needs to handle notifications. And even though we can always use the javascript “alert dialogue” Titanium gives us a much more integrated option to handle alerts using the Titanium.Notification namespace.
+
+NOTE: Notifications appear differently on different operating systems but they can be called programmatically the same way. On the screen cast I’m using a Mac with my growl notifications setup to come from the bottom. Your notifications may come from another corner (top /bottom right in most cases) depending on your OS and settings.
+
+References:
+* Titanium Notifications: http://www.codestrong.com/titanium/api/titanium/Notifications
+* Source Code:  http://github.com/imarichardson/Titewalk_Screencasts/tree/master/Episode_3/
